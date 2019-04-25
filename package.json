@@ -13,23 +13,23 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "materialize-css": "^1.0.0-rc.2"
+    "materialize-css": "^1.0.0-rc.2",
+    "vue-class-component": "^7.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-typescript": "^7.4.0",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-typescript": "^7.3.3",
     "@types/express": "^4.16.1",
     "@types/gulp": "^4.0.6",
     "@types/node": "^11.13.6",
+    "@vue/component-compiler-utils": "^3.0.0",
     "del": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-exec": "^3.0.2",
     "gulp-typescript": "^5.0.1",
+    "pug": "^2.0.3",
+    "sass": "^1.19.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.4",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   }
 }
