@@ -1,4 +1,4 @@
-    import { dest, series } from 'gulp'
+import { dest, series } from 'gulp'
 import ts from 'gulp-typescript';
 import del from 'del';
 const { exec } = require('child_process');

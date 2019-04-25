@@ -8,20 +8,54 @@
     <title>MarketCentral</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-
-
+    <script src="wiring.ts" ></script>
     <!-- Compiled and minified JavaScript -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
 </head>
 
-<body >
+<body>
     <div id="app" class="containter">
-    </div><!-- End of container -->
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a v-bind:href="ssologin" class="waves-effect waves-light btn">Login</a>
+                    <a href="#" data-target="collapse-menu" class="sidenav-trigger"><i
+                            class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="">Sass</a></li>
+                        <li><a href="">Components</a></li>
+                        <li><a href="">Javascript</a></li>
+                        <li><a href="">Mobile</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="collapse-menu">
+            <li><a href="">Sass</a></li>
+            <li><a href="">Components</a></li>
+            <li><a href="">Javascript</a></li>
+            <li><a href="">Mobile</a></li>
+        </ul>
+        <div class="fixed-action-btn"><a href="#" class="btn-floating blue btn-large waves-effect">
+                <i class="large material-icons">search</i></a>
+        </div>
 
-    <script src="wiring.ts" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <div class="sanity">{{ message }}</div>
+        <input v-model="message">
+    </div><!-- End of container -->
+    <script>
+ 
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Materialize elements
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+    </script>
+
 </body>
 
 </html>
