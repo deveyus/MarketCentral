@@ -3,15 +3,15 @@ import path from 'path';
 import { defaultRoute } from './routes/defaultRoute';
 import { oauth } from './routes/oauth'
 import crypto from 'crypto';
+import { clientID, codeChallengeBase } from "./config"
 const app = express();
 const port = 2424; // Why not? I don't think anything uses this port.
 
 // building up the SSO sign on data.
 const callbackURL: string = "http://localhost:2424/eve/callback"
-const clientID: string = "9c64d1ffaeab4585af975e77d035c9b4"
 const responseType: string = "code"
-const scope: string = encodeURIComponent("esi-skills.read_skills.v1 esi-wallet.read_character_wallet.v1 esi-assets.read_assets.v1 esi-ui.open_window.v1 esi-markets.structure_markets.v1 esi-characters.read_loyalty.v1 esi-characters.read_standings.v1 esi-markets.read_character_orders.v1 esi-contracts.read_character_contracts.v1")
-const codeChallengeBase: string = crypto.randomBytes(32).toString("base64")
+const scope: string = "esi-skills.read_skills.v1 esi-wallet.read_character_wallet.v1 esi-assets.read_assets.v1 esi-ui.open_window.v1 esi-markets.structure_markets.v1 esi-characters.read_loyalty.v1 esi-characters.read_standings.v1 esi-markets.read_character_orders.v1 esi-contracts.read_character_contracts.v1"
+
 const codeChallenge: string = crypto.createHash("sha256").update(codeChallengeBase).digest("base64");
 const codeChallengeMethod: string = "S256"
 const state: string = crypto.randomBytes(32).toString("hex");

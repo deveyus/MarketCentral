@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/app.js",
+    "start": "node --inspect ./dist/app.js",
     "build": "tsc"
   },
   "keywords": [],
@@ -29,7 +29,6 @@
     "gulp-exec": "^3.0.2",
     "gulp-typescript": "^5.0.1",
     "ts-node": "^8.1.0",
-    "typescript": "^3.4.4",
-    "vue": "^2.6.10"
+    "typescript": "^3.4.4"
   }
 }
