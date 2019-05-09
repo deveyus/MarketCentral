@@ -20,4 +20,3 @@ function parseIncomingToken(_err: any, _httpResponse: reqlib.Response, body: any
   console.log(`Server Response: ${body}`)
 }
 
-// console.log(settings.eveJWT)
